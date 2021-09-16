@@ -1,0 +1,658 @@
+* {
+    margin: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    /* background-color: rgba(222, 184, 135, 0.541); */
+    background-color: #fff;
+    font-family: 'Open Sans', sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: grey;
+}
+
+.containerCard {
+    max-width: 425px;
+    margin: auto;
+    margin-top: 20px;
+    overflow: hidden;
+    box-shadow: 0 6px 20px 0 #dbdbe8;
+    /* background-color: white; */
+    /* box-shadow: 15px 0 0 inset black, -15px 0 0 0 inset black; */
+    /* margin-bottom: 0 0 30px 0; */
+    box-sizing: border-box;
+    position: relative;
+}
+
+nav {
+    width: 100%;
+    height: 80px;
+    position: fixed;
+    z-index: 1;
+    bottom: 0;
+    border-top: 1px solid gray;
+    background-color: white;
+    white-space: nowrap;
+    overflow-x: scroll;
+}
+
+@media only screen and (max-width:768px) {
+    .icon {
+        padding: 12px 30px 0 30px;
+        font-weight: 400;
+    }
+}
+
+@media only screen and (max-width:430px) {
+    .icon {
+        padding: 12px 30px 0 30px;
+        font-weight: 400;
+    }
+}
+
+.icon {
+    text-align: center;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 600;
+    padding: 10px 65px 0 70px;
+    display: inline-block;
+}
+
+.icon a {
+    text-decoration: none;
+    color: #3C3D41;
+}
+
+.icon i {
+    font-size: 25px;
+    color: #D1B54B;
+}
+
+.Bnnimg {
+    border: 8px solid #D1B54B;
+}
+
+.head {
+    width: 100%;
+    height: 300px;
+    padding-top: 20px;
+    font-family: 'Open Sans', sans-serif;
+    text-align: center;
+    color: white;
+    background-color: #3c3d41;
+}
+
+.head img {
+    width: 100%;
+    height: 100%;
+    background-color: white;
+}
+
+.head h2 {
+    position: relative;
+    letter-spacing: 5px;
+}
+
+.head h2::after {
+    content: '';
+    position: absolute;
+    width: 120px;
+    top: 45px;
+    left: 160px;
+    border-bottom: 2px solid #D1B54B;
+}
+
+.head p {
+    margin: 20px 0 10px 0;
+}
+
+.social {
+    width: 100%;
+    display: flex;
+    padding: 0 20px;
+    box-sizing: border-box;
+    justify-content: space-between;
+}
+
+.social span {
+    font-size: 18px;
+    background: #424242;
+    width: 90px;
+    line-height: 2;
+    border-radius: 10px;
+}
+
+.social span i {
+    color: white;
+}
+
+.theme-stripe {
+    height: 20px;
+    background-color: #D1B54B;
+    box-shadow: 0 10px 20px 0 #dbdbe8;
+}
+
+.trapezoid {
+    position: relative;
+    width: 300px;
+    margin: 0 auto;
+    height: 120px;
+    background: #3c3d41;
+    border-radius: 0 0 20px 20px;
+    transform: perspective(350px) rotateX(-65deg);
+    margin-top: -50px;
+    box-shadow: 0 26px 20px 0 #dbdbe8;
+    opacity: 0.97;
+}
+
+.section-close {
+    opacity: 0.94;
+    height: 95px;
+    margin-bottom: -44px;
+    transform: perspective(350px) rotateX(-115deg);
+}
+
+.section-start {
+    opacity: 0.94;
+    height: 95px;
+    margin-top: -44px;
+}
+
+.detail {
+    width: 100%;
+    /* height: 320px; */
+    text-align: center;
+    /* border-top: 10px solid #f17d3a; */
+}
+
+.detail::before {
+    content: ' ';
+    width: 60px;
+    margin: 0 auto;
+    height: 32%;
+    background: #D1B54B;
+    border-radius: 20px 0px 0px 20px;
+    box-shadow: 0 26px 20px 0 #dbdbe8;
+    opacity: 0.97;
+    position: absolute;
+    top: 55%;
+    left: -17px;
+    transform: translate(0, -50%) perspective(350px) rotateY(-115deg);
+}
+
+.detail::after {
+    content: ' ';
+    width: 60px;
+    margin: 0 auto;
+    height: 32%;
+    background: #D1B54B;
+    border-radius: 20px 0px 0px 20px;
+    box-shadow: 0 26px 20px 0 #dbdbe8;
+    opacity: 0.97;
+    position: absolute;
+    top: 55%;
+    right: -17px;
+    transform: translate(0, -50%) perspective(350px) rotateY(-65deg);
+}
+
+.icon_sub_box {
+    font-size: 18px;
+    background: #D1B54B;
+    width: 40px;
+    line-height: 40px;
+    border-radius: 50%;
+    margin: auto;
+    text-align: center;
+    position: relative;
+}
+
+.icon_sub_box::after {
+    content: '';
+    position: absolute;
+    width: 70px;
+    height: 1px;
+    background-color: #D1B54B;
+    right: -70px;
+    top: 50%;
+}
+
+.icon_sub_box::before {
+    content: '';
+    position: absolute;
+    width: 70px;
+    height: 1px;
+    background-color: #D1B54B;
+    left: -70px;
+    top: 50%;
+}
+
+.icon_sub_box i {
+    color: white;
+}
+
+.Add_bar {
+    width: 80%;
+    height: 300px;
+    /* background-image: url(black-bg.jpg); */
+    float: left;
+}
+
+.input_row {
+    height: 30px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 600;
+    margin: 10px 15px;
+}
+
+.data_box {
+    width: 100%;
+    margin: auto;
+    /* border: 1px solid #3b85b9; */
+    padding: 5px 15px;
+    box-sizing: border-box;
+}
+
+.data_box button,
+input {
+    height: 40px;
+    box-sizing: border-box;
+    border-radius: 5px;
+    border-bottom: 3px solid dimgray !important;
+    font-size: 15px;
+    padding: 2px;
+    font-family: 'Open Sans', sans-serif;
+    outline: none !important;
+}
+
+.data_box input::placeholder {
+    padding: 0 5px;
+    color: black;
+}
+
+.btn {
+    border: 1px solid rgba(128, 128, 128, 0.719) !important;
+}
+
+.icon_row {
+    float: right;
+    margin: 20px 0;
+}
+
+
+/* ........................................................... */
+
+.AboutUS {
+    width: 100%;
+    height: 100vh;
+}
+
+h3 {
+    margin: 0 20px;
+    padding-bottom: 10px;
+    font-size: 22px;
+    text-align: left;
+    border-bottom: 2px solid #D1B54B;
+}
+
+
+/* .Product {
+    width: 100%;
+}
+
+.product_box {
+    width: 85%;
+    height: 400px;
+    margin: auto;
+    margin-top: 20px;
+    border: 1px solid #3b85b9;
+    border-radius: 10px;
+    padding: 10px;
+    box-shadow: 0 6px 20px 0 #dbdbe8;
+    background-color: #fff;
+}
+
+.img_box {
+    width: 320px;
+    height: 250px;
+    margin: auto;
+    margin: 30px 0 30px 8px;
+    /* background-color: slategray; */
+
+.img_box img {
+    width: 320px;
+    height: 250px;
+    background-size: cover;
+}
+
+.product_box span {
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.product_box button {
+    padding: 5px;
+    font-size: 16px;
+    border: 2px solid #3f51b5;
+    color: white;
+    border-radius: 3px;
+    float: right;
+    outline: none;
+    background-color: #3b85b9;
+}
+
+*/ .Payment {
+    width: 90%;
+    margin: auto;
+    text-align: center;
+    padding-bottom: 30px;
+}
+
+.Payment img {
+    width: 220px;
+    height: 220px;
+    background-size: cover;
+}
+
+
+/* .................................................................. */
+
+.portfolio {
+    width: 90%;
+    margin: auto;
+}
+
+.gallery {
+    display: inline-block;
+    text-align: center;
+    margin: 30px auto;
+    clear: both;
+    padding: 10px;
+    background-color: #ccc;
+    border-radius: 5px;
+}
+
+.IMGgallery {
+    height: 430px;
+}
+
+.IMGgallery img {
+    /* thumbnails */
+    width: 100%;
+    height: 90%;
+}
+
+.BOX {
+    height: 200px;
+    margin: auto;
+    text-align: center;
+}
+
+.pre {
+    background-color: #eee;
+    border-radius: 5px;
+    padding: 8px;
+    clear: both;
+}
+
+.highlight {
+    color: red;
+}
+
+
+/* ..............................Services.................................... */
+
+body {
+    background: #ccc;
+}
+
+.main {
+    font-family: Arial;
+    width: 500px;
+    display: block;
+    margin: 0 auto;
+}
+
+.slider h3 {
+    background: #fff;
+    color: #3498db;
+    font-size: 36px;
+    line-height: 100px;
+    margin: 10px;
+    padding: 2%;
+    position: relative;
+    text-align: center;
+}
+
+.action {
+    display: block;
+    margin: 100px auto;
+    width: 100%;
+    text-align: center;
+}
+
+.action a {
+    display: inline-block;
+    padding: 5px 10px;
+    background: #f30;
+    color: #fff;
+    text-decoration: none;
+}
+
+.action a:hover {
+    background: #000;
+}
+
+
+/* .................................................................. */
+
+.review {
+    width: 90%;
+    margin: auto;
+    margin-bottom: 30px;
+}
+
+.review_content {
+    /* background-color: cadetblue; */
+    padding: 30px 0 10px 0;
+    border-bottom: 2px solid #3b85b9;
+}
+
+.review_content p {
+    display: inline-block;
+    font-size: 15px;
+    font-weight: 600;
+    color: slateblue;
+}
+
+.review_content span {
+    font-size: 13px;
+    float: right;
+}
+
+.rew_sub span {
+    display: inline;
+    float: left;
+    font-size: 20px;
+    margin: 7px 0;
+    color: #3b85b9;
+}
+
+.review_content h4 {
+    font-size: 20px;
+    margin-top: 45px;
+}
+
+.comment_box {
+    width: 95%;
+    height: 250px;
+    margin: auto;
+    margin-top: 20px;
+    /* border: 1px solid #f5b343; */
+    border-radius: 10px;
+    padding: 10px;
+    box-shadow: 0 6px 20px 0 #dbdbe8;
+    background-color: #fdece242;
+}
+
+
+/* ........................................................ */
+
+.starrrrr {
+    width: 100%;
+    height: 40px;
+    background: #F4F2F3;
+    text-align: center;
+    display: flex;
+    margin: auto;
+    margin: 10px 0;
+    padding-top: 10px;
+    border-radius: 5px;
+    border: 1px solid rgba(128, 128, 128, 0.568);
+    flex-direction: column;
+    justify-content: center;
+}
+
+.starrrrr label {
+    cursor: pointer;
+}
+
+svg {
+    width: 3rem;
+    height: 2rem;
+    padding: 0.15rem;
+}
+
+
+/* hide radio buttons */
+
+.starrrrr input[name="star"] {
+    display: inline-block;
+    width: 0;
+    opacity: 0;
+    margin-left: -2px;
+}
+
+
+/* hide source svg */
+
+.star-source {
+    width: 0;
+    height: 0;
+    visibility: hidden;
+}
+
+
+/* set initial color to transparent so fill is empty*/
+
+.star {
+    color: transparent;
+    transition: color 0.2s ease-in-out;
+}
+
+
+/* set direction to row-reverse so 5th star is at the end and ~ can be used to fill all sibling stars that precede last starred element*/
+
+.star-container {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    padding-top: 7px;
+}
+
+.starrrrr label:hover~label .star,
+svg.star:hover,
+input[name="star"]:focus~label .star,
+input[name="star"]:checked~label .star {
+    color: orange;
+}
+
+.starrrrr input[name="star"]:checked+label .star {
+    animation: starred 0.5s;
+}
+
+.starrrrr input[name="star"]:checked+label {
+    animation: scaleup 1s;
+}
+
+@keyframes scaleup {
+    from {
+        transform: scale(1.2);
+    }
+    to {
+        transform: scale(1);
+    }
+}
+
+@keyframes starred {
+    from {
+        color: orangered;
+    }
+    to {
+        color: orange;
+    }
+}
+
+
+/* .................................................................... */
+
+.btnn {
+    padding: 10px 35px;
+    font-size: 16px;
+    color: white;
+    border-radius: 3px;
+    outline: none;
+    border: none;
+    background-color: #3b85b9;
+}
+
+.comment_box input,
+textarea {
+    width: 100%;
+    height: 40px;
+    border-radius: 5px;
+    border: 1px solid rgba(128, 128, 128, 0.568);
+    box-sizing: border-box;
+    padding: 8px 15px;
+    font-size: 15px;
+    margin-bottom: 10px;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.contact_box {
+    width: 85%;
+    height: 250px;
+    margin: auto;
+    margin-top: 20px;
+    border-radius: 10px;
+}
+
+.contact_box input:nth-child(1) {
+    width: 100%;
+}
+
+.contact_box input {
+    width: 49%;
+    float: left;
+    margin: 10px 0;
+    box-sizing: border-box;
+    border-radius: 5px;
+    border: 1px solid rgba(128, 128, 128, 0.568);
+    padding: 10px 5px;
+    font-size: 15px;
+    margin-bottom: 10px;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.contact_box input:nth-child(3) {
+    margin-left: 5px;
+}
+
+#i7 {
+    margin-bottom: 80px;
+}
